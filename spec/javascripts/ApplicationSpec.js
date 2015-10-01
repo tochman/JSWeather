@@ -2,7 +2,7 @@ describe('JSWeather', function() {
 
     beforeEach(function() {
         document.cookie = 'temperature' + '=; Max-Age=0'
-        jasmine.getFixtures().fixturesPath = '.';
+        //jasmine.getFixtures().fixturesPath = './lib/views/';
         loadFixtures('index.html');
         $.holdReady(false);
     });
@@ -11,19 +11,13 @@ describe('JSWeather', function() {
         document.cookie = 'temperature' + '=; Max-Age=0'
     });
 
-    it('displays thermostat default temperature', function(){
-        expect('#current').toContainText('20');
-    });
-
-    it('up button increases temperature', function(){
-        $("#increase").click();
-        expect('#current').toContainText('21');
-    });
-
-    it('down button decreases temperature', function(){
-        $("#decrease").click();
-        expect('#current').toContainText('19');
-    });
+	it('it sets the correct city value when selected from the drop-down menu', function () {
+		$('#current_city').each(function () {
+		    $(this).val("Boulder,us").change();
+	    });
+		//debugger;
+	    expect($('#city').html()).toEqual("Boulder");
+	});
 
 
 });
