@@ -11,7 +11,9 @@
 #   - dist/**/*.js
 #
 src_files:
-  - assets/js/application.js
+  - 'spec/javascripts/helpers/jquery.js'
+  - 'lib/assets/js/application.js'
+  - js/**/*.js
 
 # stylesheets
 #
@@ -25,7 +27,7 @@ src_files:
 #   - stylesheets/*.css
 #
 stylesheets:
-  - assets/css/**/*.css
+  - css/**/*.css
 
 # helpers
 #

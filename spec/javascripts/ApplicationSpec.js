@@ -12,10 +12,11 @@ describe('JSWeather', function() {
     });
 
 	it('it sets the correct city value when selected from the drop-down menu', function () {
-		$('#current_city').each(function () {
-		    $(this).val("Boulder,us").change();
-	    });
-		//debugger;
+			debugger;
+		    $('#current_city')
+			.val("Boulder,us")
+			.trigger('change');
+			//debugger;
 	    expect($('#city').html()).toEqual("Boulder");
 	});
 

@@ -6,17 +6,21 @@
 <body>
 
 <hr/>
-<select id="current_city">
+<input id="q_city"></input>
+<!--select id="current_city">
     <option value="Gothenburg,se">Göteborg</option>
     <option value="Boulder,us">Boulder</option>
     <option value="New York,us">New York</option>
     <option value="Stockholm,se">Stockholm</option>
-</select>
+</select-->
 
 <p>Temperature in <span id="city"></span> is <span id="city_temp"></span>°C</p>
 
 
 <script src='https://code.jquery.com/jquery-2.1.4.js'></script>
-<script src="js/application.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+<script src="/js/jquery.geocomplete.min.js"></script>
+<script src="/js/application.js"></script>
+
 </body>
 </html>
